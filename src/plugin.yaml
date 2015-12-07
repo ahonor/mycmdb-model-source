@@ -1,0 +1,30 @@
+name: My CMDB Resource Model Source
+version: 1.0
+rundeckPluginVersion: 1.0
+author: alexh
+date: 12/07/15
+providers:
+    - name: mycmdb-nodes
+      service: ResourceModelSource
+      plugin-type: script
+      script-interpreter: perl
+      script-file: nodes.pl
+      title: My CMDB Resource Model Source
+      description: Get node data from My CMDB
+      resource-format: resourcejson
+      config:
+        - type: String
+          name: url
+          title: URL
+          description: The CMDB URL
+        - type: String
+          name: username
+          title: Username
+          description: The cmdb username
+        - type: String
+          name: password
+          title: Password
+          description: The cmdb password
+          renderingOptions:
+            displayType: PASSWORD
+
